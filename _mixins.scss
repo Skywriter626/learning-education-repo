@@ -1,0 +1,83 @@
+@import './vars';
+
+:root {
+    --large-container: 1920px;
+    --header-container: 1700px;
+}
+
+@custom-media --small (width >= 601px);
+@custom-media --medium (width >= 768px);
+@custom-media --medlg (width >= 1081px);
+@custom-media --large (width >= 1200px);
+@custom-media --exlarge (width >= 1444px);
+
+
+@mixin fontSize($count) {
+    font-size: ($count / 16) + rem;
+    line-height: ( ($count + 2) / 16) + rem;
+}
+
+@mixin remLh($count) {
+    line-height: ($count / 16) + rem;
+}
+
+@mixin container($containerWidth) {
+    width: $containerWidth;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @media (--large) {
+        width: 1024px;
+    }
+
+    @media (--medium) {
+        width: 771px;
+    }
+
+    @media (--small) {
+        width: 100%;
+    }
+}
+
+@mixin poscenter {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin placeholder ($color, $size: 14px) {
+    &::-webkit-input-placeholder {
+        opacity: 1;
+        font-family: $fontPoppins;
+        text-transform: uppercase;
+        color: $color;
+        font-size: $size;
+    }
+    &:-moz-placeholder {
+        opacity: 1;
+        text-transform: uppercase;
+        font-family: $fontPoppins;
+        color: $color;
+        font-size: $size;
+    }
+    &::-moz-placeholder {
+        opacity: 1;
+        text-transform: uppercase;
+        font-family: $fontPoppins;
+        color: $color;
+        font-size: $size;
+    }
+    &:-ms-input-placeholder {
+        opacity: 1;
+        text-transform: uppercase;
+        font-family: $fontPoppins;
+        color: $color;
+        font-size: $size;
+    }
+}

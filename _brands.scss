@@ -1,0 +1,51 @@
+.btn {
+    width: 160px;
+    height: 60px;
+    border-radius: 80px;
+    font-family: $fontPoppins;
+    @include fontSize(22);
+    transition: background .3s ease-in-out,
+                background-color .3s ease-in-out,
+                color .3s ease-in-out;
+    &:hover, &:active {
+        cursor: pointer;
+    } 
+}
+
+.btn-primary {
+    background: $bgPrimary;
+    color: $colorPrimary;
+    font-weight: 500;
+    border: none;
+    margin-right: 34px;
+
+    &:hover, &:active {
+        background-color: rgba($bgSecondary, .7);
+        color: rgba($colorSecondary, .7);
+    }
+}
+
+.btn-secondary {
+    background: $bgSecondary;
+    color: $colorSecondary;
+    border: none;
+
+    &:hover, &:active {
+        background: $bgPrimary;
+        color: $colorPrimary;
+    }
+}
+
+.btn-connector {
+    width: 220px;
+    height: 80px;
+    background: $bgConnector;
+    color: $colorConnector;
+    font-weight: 600;
+    border: none;
+    margin-right: 40px;
+
+    &:hover, &:active {
+        background-color: rgba($bgConnector, .7);
+    }
+}
