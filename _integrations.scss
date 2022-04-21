@@ -1,0 +1,72 @@
+.integrations-section {
+    margin-top: 160px;
+
+    .integrations-section-container {
+        height: 460px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__logo--wrapper {
+        position: relative;
+    }
+
+    &__logo-onedrive {
+        position: absolute;
+        top: 10px;
+    }
+
+    &__logo-dropbox {
+        position: absolute;
+        bottom: 250px;
+        left: 320px;
+    }
+
+    &__logo-googledrive {
+        position: absolute;
+        top: 290px;
+        left: 80px;
+    }
+
+    &__logo-msteams {
+        position: absolute;
+        bottom: 0;
+        left: 320px;
+    }
+
+    &__title--wrapper {
+        width: 680px;
+        height: 460px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__title {
+        width: 480px;
+        font-family: $fontNunito;
+        font-weight: 700;
+        @include fontSize(36);
+        @include remLh(58);
+        color: $colorTitleSecondary;
+    }
+
+    &__description {
+        font-family: $fontNunito;
+        font-weight: 400;
+        @include fontSize(24);
+        @include remLh(43);
+        color: $colorDescrSecondary;
+    }
+
+    &__btn-see {
+        color: #EC72A1;
+        border: 1px solid #D77299;
+
+        &:hover, &:active {
+            background-color: rgba($colorAction, .7);
+            color: rgba($colorSecondary, .7);
+        }
+    }
+}
