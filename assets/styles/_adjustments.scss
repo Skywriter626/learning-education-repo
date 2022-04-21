@@ -1,0 +1,167 @@
+:root {
+    --body-color: #fff;
+    --basic-font: 16px, sans-serif;
+    --accent-color: rgb(102, 131, 51);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font: var(--basic-font);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0;
+    padding: 0;
+    background: var(--body-color);
+}
+
+.maincontent {
+    flex: 1 0;
+}
+
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    color: #000;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.flex-container {
+    display: flex;
+    max-width: 1000px;
+}
+
+/**
+*
+* Global settings
+*
+*/
+
+.header-container {
+    @include container(var(--header-container));
+}
+
+.partners-section-container {
+    @include container(1365px);
+}
+
+.benefits-section-container {
+    @include container(1500px);
+}
+
+.about-elearn-section-container {
+    @include container(1330px);
+}
+
+.about-elearn-section-video-container {
+    @include container(1550px);
+}
+
+.features-section-container {
+    @include container(1610px);
+}
+
+.integrations-section-container {
+    @include container(1490px);
+}
+
+.testimonial-section-container {
+    @include container(1550px);
+}
+
+.news-section-container {
+    @include container(1590px);
+}
+
+.footer-container {
+    @include container(var(--footer-container));
+}
+
+.section-tagline {
+    font-family: $fontPoppins;
+    font-weight: 600;
+    line-height: 1.2em;
+    color: #1E2A39;
+    @include fontSize(82);
+}
+
+.section-tagline-description {
+    font-family: $fontNunito;
+    font-weight: 400;
+    color: #464646;
+    @include fontSize(24);
+    @include remLh(38);
+}
+
+.section-title {
+    font-family: $fontPoppins;
+    font-weight: 600;
+    color: #000000;
+    @include fontSize(44);
+    @include remLh(79);
+} 
+
+.section-description {
+   font-family: $fontPoppins;
+   font-weight: 400;
+   color: #696984;
+   @include fontSize(24);
+   @include remLh(43);
+}
+
+.section-subtitle {
+    font-family: $fontPoppins;
+    font-weight: 600;
+    color: #000000;
+    @include fontSize(40);
+    @include remLh(64);
+}
+
+.section-comment {
+    font-family: $fontPoppins;
+    font-weight: 400;
+    @include fontSize(22);
+    @include remLh(40);
+    color: #696984;
+    letter-spacing: 0.02em;
+}
+
+.section-upper-title {
+    position: relative;
+    margin-left: 110px;
+    font-family: $fontNunito;
+    font-weight: 400;
+    @include fontSize(20);
+    @include remLh(27);
+    letter-spacing: 0.2em;
+    color:#C96B8F;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -140px;
+        display: block;
+        height: 1px;
+        width: 80px;
+        margin: 0 30px;
+        background-color: #EEA4C0;
+    }
+}

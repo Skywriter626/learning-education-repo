@@ -1,0 +1,27 @@
+@import '../fonts/fonts';
+@import './mixins';
+@import '../../libs/libs';
+
+@import './brands';
+@import './adjustments';
+
+/*
+    Components
+*/
+
+@import './components/header';
+@import './components/footer';
+
+
+/*
+    Layout
+*/
+
+@import './blocks/main-section';
+@import './blocks/partners-section';
+@import './blocks/about-elearn';
+@import './blocks/benefits';
+@import './blocks/features';
+@import './blocks/integrations';
+@import './blocks/testimonial';
+@import './blocks/news';

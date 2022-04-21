@@ -1,0 +1,118 @@
+.btn {
+    border-radius: 80px;
+    font-family: $fontPoppins;
+    @include fontSize(22);
+    transition: background .3s ease-in-out,
+                background-color .3s ease-in-out,
+                color .3s ease-in-out,
+                opacity .3s ease-in-out;
+    &:hover, &:active {
+        cursor: pointer;
+    } 
+}
+
+.btn-primary {
+    width: 160px;
+    height: 60px;
+    background: $bgPrimary;
+    color: $colorPrimary;
+    font-weight: 500;
+    border: none;
+    margin-right: 34px;
+
+    &:hover, &:active {
+        background-color: rgba($bgSecondary, .7);
+        color: rgba($colorSecondary, .7);
+    }
+}
+
+.btn-secondary {
+    width: 160px;
+    height: 60px;
+    background: $bgSecondary;
+    color: $colorSecondary;
+    border: none;
+
+    &:hover, &:active {
+        background: $bgPrimary;
+        color: $colorPrimary;
+    }
+}
+
+.btn-tertiary {
+    width: 280px;
+    height: 80px;
+    background: transparent;
+    color: $colorSecondary;
+    border: 1px solid $colorSecondary;
+
+    &:hover, &:active {
+        background-color: $bgPrimary;
+        color: $colorPrimary;
+    }
+}
+
+.btn-quaternary {
+    width: 280px;
+    height: 80px;
+    background: #EA5972;
+    color: $colorSecondary;
+    border: none;
+
+    &:hover, &:active {
+        background-color: rgba(#EA5972, .7);
+        color: rgba($colorSecondary, .7);
+    }
+}
+
+.btn-connector {
+    width: 220px;
+    height: 80px;
+    background: $bgConnector;
+    color: $colorConnector;
+    font-weight: 600;
+    border: none;
+    margin-right: 40px;
+
+    &:hover, &:active {
+        background-color: rgba($bgConnector, .7);
+    }
+}
+
+.btn-subscriptor {
+    width: 180px;
+    height: 60px;
+    background: linear-gradient(105.5deg, #FC7E94 19.57%, #DC5E74 78.85%);
+    border-radius: 60px;     
+    font-weight: 500;
+    @include remLh(33);
+    color: $colorSubscriptor;
+
+    &:hover, &:active {
+       opacity: .7;
+    }
+}
+
+.section__play {
+    &--wrapper {
+        background:#FFFFFF;
+        box-shadow: 2px 20px 60px rgba(61, 155, 185, 0.1);
+        @include center;
+        border-radius: 50%;
+        transition: background .3s ease-in-out;
+
+        &:hover {
+            background: $colorPrimary;
+            cursor: pointer;
+
+            .main-section__play-btn {
+                color: #FFFFFF;
+            }                
+        }
+    }
+
+    &-btn {
+        color: #000000;
+        transition: color .3s ease-in-out;
+    }
+}
