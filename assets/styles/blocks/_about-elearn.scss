@@ -85,27 +85,6 @@
             border-radius: 50%;
             z-index: 9;
         }
-
-        .large-square {
-            position: absolute;
-            width: 231px;
-            height: 231px;
-            bottom: 0;
-            right: 15px;
-            background: #E97186;
-            border-radius: 20px;
-            z-index: 9;
-        }
-
-        .small-square {
-            position: absolute;
-            width: 138px;
-            height: 138px;
-            right: 625px;
-            background: #6CBEB9;
-            border-radius: 20px;
-            z-index: 9;
-        }
     }
 
     &-video__title {
@@ -138,8 +117,8 @@
 
     &-video__img--wrapper {
         position: relative;
-        width: 705px;
-        height: 475px;
+        width: 745px;
+        height: 515px;
         margin: 20px 20px 20px 0;
         border-radius: 20px;
         background-image: url(/assets/images/about-elearn/confident-teacher-explaining-lesson-pupils.jpg);
