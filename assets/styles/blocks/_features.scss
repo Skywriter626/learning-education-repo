@@ -22,9 +22,9 @@
     }
 
     &__img-classroom {
-        width: 940px;
-        height: 565px;
-        margin-top: 175px;
+        width: 900px;
+        height: 650px;
+        margin-top: 110px;
     }
 
     &__info-classroom--wrapper {
@@ -96,7 +96,7 @@
     }
 
     &__info-student--wrapper {
-        margin: 350px 0 0 70px;
+        margin: 330px 0 0 70px;
     }
 
     &__subtitle-student {
@@ -111,17 +111,17 @@
     &__img-student {
         width: 637px;
         height: 611px;
-        margin-top: 195px;
+        margin: 145px 75px 0 0;
     }
 
     &__img-question {
         width: 617px;
         height: 651px;
-        margin-top: 205px;
+        margin: 170px 0 0 5px;
     }
 
     &__info-question--wrapper {
-        margin: 295px 0 0 250px;
+        margin: 305px 100px 0 0;
     }
 
     &__subtitle-question {
@@ -134,7 +134,7 @@
     }
 
     &__info-gradebook--wrapper {
-        margin: 320px 0 0 70px;
+        margin-top: 285px;
     }
 
     &__subtitle-gradebook {
@@ -147,19 +147,19 @@
     }
 
     &__img-gradebook {
-        width: 790px;
-        height: 555px;
-        margin-top: 210px;
+        width: 810px;
+        height: 560px;
+        margin-top: 145px;
     }
 
     &__img-discussion {
         width: 755px;
         height: 570px;
-        margin-top: 160px;
+        margin: 145px 0 0 5px;
     }
 
     &__info-discussion--wrapper {
-        margin: 275px 0 0 190px;
+        margin: 260px 60px 0 0;
     }
 
     &__subtitle-discussion {
@@ -172,7 +172,7 @@
     }
 
     &__btn-see {
-        margin: 0 auto;
+        margin: 100px auto 0 auto;
         color: $colorAction;
         border: 1px solid $colorAction;
 

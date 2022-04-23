@@ -1046,7 +1046,6 @@ h1, h2, h3, h4, h5, h6, p {
   position: relative;
   width: 745px;
   height: 515px;
-  margin: 20px 20px 20px 0;
   border-radius: 20px;
   background-image: url(/assets/images/about-elearn/confident-teacher-explaining-lesson-pupils.jpg);
   background-repeat: no-repeat;
@@ -1208,9 +1207,9 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .features-section__img-classroom {
-  width: 940px;
-  height: 565px;
-  margin-top: 175px;
+  width: 900px;
+  height: 650px;
+  margin-top: 110px;
 }
 
 .features-section__info-classroom--wrapper {
@@ -1289,7 +1288,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .features-section__info-student--wrapper {
-  margin: 350px 0 0 70px;
+  margin: 330px 0 0 70px;
 }
 
 .features-section__subtitle-student {
@@ -1304,17 +1303,17 @@ h1, h2, h3, h4, h5, h6, p {
 .features-section__img-student {
   width: 637px;
   height: 611px;
-  margin-top: 195px;
+  margin: 145px 75px 0 0;
 }
 
 .features-section__img-question {
   width: 617px;
   height: 651px;
-  margin-top: 205px;
+  margin: 170px 0 0 5px;
 }
 
 .features-section__info-question--wrapper {
-  margin: 295px 0 0 250px;
+  margin: 305px 100px 0 0;
 }
 
 .features-section__subtitle-question {
@@ -1327,7 +1326,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .features-section__info-gradebook--wrapper {
-  margin: 320px 0 0 70px;
+  margin-top: 285px;
 }
 
 .features-section__subtitle-gradebook {
@@ -1340,19 +1339,19 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .features-section__img-gradebook {
-  width: 790px;
-  height: 555px;
-  margin-top: 210px;
+  width: 810px;
+  height: 560px;
+  margin-top: 145px;
 }
 
 .features-section__img-discussion {
   width: 755px;
   height: 570px;
-  margin-top: 160px;
+  margin: 145px 0 0 5px;
 }
 
 .features-section__info-discussion--wrapper {
-  margin: 275px 0 0 190px;
+  margin: 260px 60px 0 0;
 }
 
 .features-section__subtitle-discussion {
@@ -1365,7 +1364,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .features-section__btn-see {
-  margin: 0 auto;
+  margin: 100px auto 0 auto;
   color: #EA5E94;
   border: 1px solid #EA5E94;
 }
