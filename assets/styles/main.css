@@ -1473,13 +1473,11 @@ h1, h2, h3, h4, h5, h6, p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .testimonial-section__title--wrapper {
   width: 600px;
-  height: 655px;
+  height: 575px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1512,26 +1510,26 @@ h1, h2, h3, h4, h5, h6, p {
 
 .testimonial-section__slider--wrapper {
   position: relative;
-  width: 775px;
-  height: 820px;
+  width: 800px;
+  height: 890px;
+}
+
+.testimonial-section__slider--wrapper .slick-btn {
+  position: absolute;
+  top: 280px;
+  left: 590px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: none;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 60px rgba(41, 44, 124, 0.15);
+          box-shadow: 0px 4px 60px rgba(41, 44, 124, 0.15);
 }
 
 .testimonial-section__slider-img {
-  width: 560px;
-  height: 700px;
-}
-
-.testimonial-section__slider-assessment--wrapper {
-  position: absolute;
-  bottom: 0;
-  left: 70px;
-  width: 680px;
-  height: 330px;
-  -webkit-box-shadow: 2px 4px 60px rgba(41, 44, 124, 0.1);
-          box-shadow: 2px 4px 60px rgba(41, 44, 124, 0.1);
-  border-radius: 20px;
-  background-image: url(/assets/images/testimonial/assessment.jpg);
-  background-position: 49% 46%;
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
 }
 
 .testimonial-section__btn-write {
@@ -1571,7 +1569,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .news-section {
-  margin: 100px 0 160px 0;
+  margin: 150px 0 160px 0;
 }
 
 .news-section .news-section-container {

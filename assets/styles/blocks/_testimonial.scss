@@ -5,12 +5,11 @@
         height: 820px;
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
     }
 
     &__title--wrapper {
         width: 600px;
-        height: 655px;
+        height: 575px;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
@@ -34,25 +33,24 @@
 
     &__slider--wrapper {
         position: relative;
-        width: 775px;
-        height: 820px;
+        width: 800px;
+        height: 890px;
+
+        .slick-btn {
+            position: absolute;
+            top: 280px;
+            left: 590px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: none;
+            background: #FFFFFF;
+            box-shadow: 0px 4px 60px rgba(41, 44, 124, 0.15);
+        }
     }
 
     &__slider-img {
-        width: 560px;
-        height: 700px;
-    }
-
-    &__slider-assessment--wrapper {
-        position: absolute;
-        bottom: 0;
-        left: 70px;
-        width: 680px;
-        height: 330px;
-        box-shadow: 2px 4px 60px rgba(41, 44, 124, 0.1);
-        border-radius: 20px;
-        background-image: url(/assets/images/testimonial/assessment.jpg);
-        background-position: 49% 46%;
+        transform: translateX(50px);
     }
 
     &__btn-write {
