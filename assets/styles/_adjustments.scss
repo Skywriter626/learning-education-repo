@@ -58,6 +58,10 @@ h1, h2, h3, h4, h5, h6, p {
     @include container(var(--header-container));
 }
 
+.main-section-container {
+    @include container(var(--large-container));
+}
+
 .partners-section-container {
     @include container(1365px);
 }

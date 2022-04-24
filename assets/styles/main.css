@@ -4,7 +4,7 @@
 @import url("./normalize.css");
 :root {
   --large-container: 1920px;
-  --header-container: 1700px;
+  --header-container: 1920px;
   --footer-container: 1920px;
 }
 
@@ -18,6 +18,7 @@
   font-family: "Poppins";
   font-size: 1.375rem;
   line-height: 1.5rem;
+  z-index: 10;
   -webkit-transition: background .3s ease-in-out, background-color .3s ease-in-out, color .3s ease-in-out, opacity .3s ease-in-out;
   transition: background .3s ease-in-out, background-color .3s ease-in-out, color .3s ease-in-out, opacity .3s ease-in-out;
 }
@@ -106,6 +107,37 @@
 
 .btn-subscriptor:hover, .btn-subscriptor:active {
   opacity: .7;
+}
+
+.logo-link {
+  position: relative;
+  width: 141px;
+  height: 83px;
+}
+
+.logo-bg {
+  position: absolute;
+  top: 10px;
+  left: 11px;
+  width: 60px;
+  height: 60px;
+  background: #F28095;
+  border-radius: 6px;
+  border: none;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.logo-title {
+  position: absolute;
+  top: 13px;
+  left: 22px;
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.125rem;
+  line-height: 3rem;
+  letter-spacing: 0.04em;
 }
 
 .section__play--wrapper {
@@ -225,6 +257,30 @@ h1, h2, h3, h4, h5, h6, p {
 
 @media (--small) {
   .header-container {
+    width: 100%;
+  }
+}
+
+.main-section-container {
+  width: var(--large-container);
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media (--large) {
+  .main-section-container {
+    width: 1024px;
+  }
+}
+
+@media (--medium) {
+  .main-section-container {
+    width: 771px;
+  }
+}
+
+@media (--small) {
+  .main-section-container {
     width: 100%;
   }
 }
@@ -527,14 +583,26 @@ h1, h2, h3, h4, h5, h6, p {
 /*
     Components
 */
-.header {
-  position: absolute;
-  left: 100px;
-  z-index: 10;
+.header-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 0;
 }
 
-.header-container {
-  margin-top: 30px;
+.header__img-bg {
+  position: absolute;
+  top: 0;
+  z-index: 9;
+}
+
+.header__menu {
+  width: 1360px;
+  margin-left: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -544,48 +612,15 @@ h1, h2, h3, h4, h5, h6, p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 18px 0;
-}
-
-.header__menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.header__menu .logo-link {
-  position: relative;
-  width: 141px;
-  height: 83px;
-  margin-right: 570px;
+  z-index: 10;
 }
 
 .header__menu .logo-bg {
-  position: absolute;
-  top: 10px;
-  left: 11px;
-  width: 60px;
-  height: 60px;
   background: #F28095;
-  border-radius: 6px;
   border: none;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
 }
 
 .header__menu .logo-title {
-  position: absolute;
-  top: 13px;
-  left: 22px;
-  font-family: "Poppins";
-  font-weight: 700;
-  font-size: 2rem;
-  line-height: 2.125rem;
-  line-height: 48px;
-  letter-spacing: 0.04em;
   color: #1E2A39;
 }
 
@@ -594,6 +629,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .header__menu .nav__list {
+  width: 650px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -635,6 +671,32 @@ h1, h2, h3, h4, h5, h6, p {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+}
+
+.footer__logo--wrapper .logo-bg {
+  background: transparent;
+  border: 2px solid #DC5E74;
+}
+
+.footer__logo--wrapper .logo-title {
+  color: #FFFFFF;
+}
+
+.footer__logo--wrapper .logo-separator {
+  height: 83px;
+  margin: 0 35px 0 85px;
+  border: 1px solid rgba(255, 255, 255, 0.46);
+}
+
+.footer__logo--wrapper .logo-description {
+  width: 155px;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 1.375rem;
+  line-height: 1.5rem;
+  line-height: 2.0625rem;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
 }
 
 .footer__input-subscription--wrapper {
@@ -739,73 +801,30 @@ h1, h2, h3, h4, h5, h6, p {
   text-align: center;
 }
 
-.logo-link {
-  position: relative;
-  width: 141px;
-  height: 83px;
-}
-
-.logo-bg {
-  position: absolute;
-  top: 10px;
-  left: 11px;
-  width: 60px;
-  height: 60px;
-  background: transparent;
-  border: 2px solid #DC5E74;
-  border-radius: 6px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.logo-title {
-  position: absolute;
-  top: 13px;
-  left: 22px;
-  font-family: "Poppins";
-  font-weight: 700;
-  font-size: 2rem;
-  line-height: 2.125rem;
-  line-height: 48px;
-  letter-spacing: 0.04em;
-  color: #FFFFFF;
-}
-
-.logo-separator {
-  height: 83px;
-  margin: 0 35px 0 85px;
-  border: 1px solid rgba(255, 255, 255, 0.46);
-}
-
-.logo-description {
-  width: 155px;
-  font-family: "Poppins";
-  font-weight: 600;
-  font-size: 1.375rem;
-  line-height: 1.5rem;
-  line-height: 2.0625rem;
-  letter-spacing: 0.04em;
-  color: #FFFFFF;
-}
-
 /*
     Layout
 */
-.main-section {
-  position: relative;
-  height: 1118px;
+.main-section .main-section-container {
+  height: 975px;
 }
 
 .main-section__tagline--wrapper {
   position: relative;
+  height: 435px;
   z-index: 99;
+  margin-left: 140px;
+  padding-top: 160px;
   text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .main-section__tagline {
-  position: absolute;
-  top: 300px;
-  left: 140px;
   width: 865px;
   line-height: 98px;
   color: #1E2A39;
@@ -813,21 +832,17 @@ h1, h2, h3, h4, h5, h6, p {
 
 .main-section__tagline-accent {
   position: absolute;
-  top: 390px;
-  left: 345px;
+  top: 245px;
+  left: 210px;
 }
 
 .main-section__tagline-description {
-  position: absolute;
-  top: 530px;
-  left: 140px;
   width: 520px;
+  margin-top: 30px;
 }
 
 .main-section__actions {
-  position: absolute;
-  top: 655px;
-  left: 140px;
+  margin-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -855,23 +870,8 @@ h1, h2, h3, h4, h5, h6, p {
   color: #252641;
 }
 
-.main-section__bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  z-index: 9;
-}
-
-.main-section__bg-checkbox-icon {
-  position: absolute;
-  top: 625px;
-  left: 1760px;
-  z-index: 10;
-}
-
-.partners-section {
-  text-align: center;
+.partners-section .partners-section-container {
+  margin-top: 100px;
 }
 
 .partners-section .partners__list {
@@ -889,11 +889,12 @@ h1, h2, h3, h4, h5, h6, p {
 .partners-section-description {
   font-family: "Public", sans-serif;
   font-weight: 400;
-  line-height: 56px;
-  letter-spacing: 0.03em;
-  margin: 100px 0 50px 0;
   font-size: 2.1875rem;
   line-height: 2.3125rem;
+  line-height: 3.5rem;
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin-bottom: 50px;
   color: #424246;
 }
 
@@ -1510,14 +1511,20 @@ h1, h2, h3, h4, h5, h6, p {
 
 .testimonial-section__slider--wrapper {
   position: relative;
-  width: 800px;
-  height: 890px;
+  width: 750px;
+  height: 820px;
 }
 
-.testimonial-section__slider--wrapper .slick-btn {
+.testimonial-section__slider {
+  position: relative;
+  width: 100%;
+  height: 700px;
+}
+
+.testimonial-section__slider .slick-btn {
   position: absolute;
   top: 280px;
-  left: 590px;
+  left: 540px;
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -1528,8 +1535,100 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .testimonial-section__slider-img {
-  -webkit-transform: translateX(50px);
-          transform: translateX(50px);
+  width: 560px;
+  height: 700px;
+  border-radius: 20px;
+}
+
+.testimonial-section__assessment--wrapper {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 680px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background: #FFFFFF;
+  -webkit-box-shadow: 2px 4px 60px rgba(41, 44, 124, 0.1);
+          box-shadow: 2px 4px 60px rgba(41, 44, 124, 0.1);
+  border-radius: 20px;
+  z-index: 10;
+}
+
+.testimonial-section__assessment-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 100%;
+  background: #CD356F;
+  -webkit-box-shadow: 2px 4px 60px rgba(41, 44, 124, 0.1);
+          box-shadow: 2px 4px 60px rgba(41, 44, 124, 0.1);
+  border-radius: 20px 0px 0px 20px;
+}
+
+.testimonial-section__assessment-content {
+  height: 100%;
+  padding: 40px 40px 30px 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.testimonial-section__assessment-content:nth-child(2) {
+  display: none;
+}
+
+.testimonial-section__assessment-review {
+  width: 565px;
+  padding-left: 30px;
+  margin-bottom: 30px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 1.375rem;
+  line-height: 1.5rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.02em;
+  color: #5F5F7E;
+  border-left: 1px solid #BDBDD1;
+}
+
+.testimonial-section__assessment-author {
+  padding-left: 30px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.625rem;
+  line-height: 1.5rem;
+  color: #484848;
+}
+
+.testimonial-section__assessment-rating {
+  text-align: end;
+}
+
+.testimonial-section__rating-icon {
+  font-size: 1.5rem;
+  line-height: 1.625rem;
+  color: #FBA333;
+}
+
+.testimonial-section__assessment-activity {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  line-height: 1.125rem;
+  letter-spacing: 0.02em;
+  color: #80819A;
+  text-align: end;
 }
 
 .testimonial-section__btn-write {
@@ -1559,8 +1658,8 @@ h1, h2, h3, h4, h5, h6, p {
   border: 1px solid #EF8DB3;
   top: -1px;
   right: -1px;
-  height: 78px;
-  width: 80px;
+  height: 100%;
+  width: 79px;
 }
 
 .testimonial-section__btn-write:hover, .testimonial-section__btn-write:active {

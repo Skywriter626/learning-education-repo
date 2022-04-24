@@ -33,13 +33,19 @@
 
     &__slider--wrapper {
         position: relative;
-        width: 800px;
-        height: 890px;
+        width: 750px;
+        height: 820px;
+    }
+
+    &__slider {
+        position: relative;
+        width: 100%;
+        height: 700px;
 
         .slick-btn {
             position: absolute;
             top: 280px;
-            left: 590px;
+            left: 540px;
             width: 80px;
             height: 80px;
             border-radius: 50%;
@@ -50,7 +56,85 @@
     }
 
     &__slider-img {
-        transform: translateX(50px);
+        width: 560px;
+        height: 700px;
+        border-radius: 20px;
+    }
+
+    &__assessment--wrapper {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 680px;
+        height: max-content;
+        background: #FFFFFF;
+        box-shadow: 2px 4px 60px rgba(41, 44, 124, 0.1);
+        border-radius: 20px;
+        z-index: 10;
+    }
+
+    &__assessment-decoration {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 14px;
+        height: 100%;
+        background: #CD356F;
+        box-shadow: 2px 4px 60px rgba(41, 44, 124, 0.1);
+        border-radius: 20px 0px 0px 20px;
+    }
+
+    &__assessment-content {
+        height: 100%;
+        padding: 40px 40px 30px 55px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        &:nth-child(2) {
+            display: none;
+        }
+    }
+
+    &__assessment-review {
+        width: 565px;
+        padding-left: 30px;
+        margin-bottom: 30px;
+        font-family: $fontNunito;
+        font-weight: 400;
+        @include fontSize(22);
+        @include remLh(40);
+        letter-spacing: 0.02em;
+        color: #5F5F7E;
+        border-left: 1px solid #BDBDD1;
+    }
+
+    &__assessment-author {
+        padding-left: 30px;
+        font-family: $fontNunito;
+        font-weight: 600;
+        @include fontSize(24);
+        @include remLh(24);
+        color: #484848;
+    }
+
+    &__assessment-rating {
+        text-align: end;
+    }
+
+    &__rating-icon {
+        @include fontSize(24);
+        color: #FBA333;
+    }
+
+    &__assessment-activity {
+        font-family: $fontNunito;
+        font-weight: 600;
+        @include fontSize(18);
+        @include remLh(18);
+        letter-spacing: 0.02em;
+        color: #80819A;
+        text-align: end;
     }
 
     &__btn-write {
@@ -73,8 +157,8 @@
             border: 1px solid #EF8DB3;
             top: -1px;
             right: -1px;
-            height: 78px;
-            width: 80px;
+            height: 100%;
+            width: 79px;
         }
 
         &:hover, &:active {

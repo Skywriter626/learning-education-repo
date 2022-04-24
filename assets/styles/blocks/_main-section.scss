@@ -1,39 +1,39 @@
 .main-section {
-    position: relative;
-    height: 1118px;
 
+    .main-section-container {
+        height: 975px;
+    }
+    
     &__tagline--wrapper {
         position: relative;
+        height: 435px;
         z-index: 99;
+        margin-left: 140px;
+        padding-top: 160px;
         text-align: left;
+        display: flex;
+        flex-direction: column;
     }
 
     &__tagline {
-        position: absolute;
-        top: 300px;
-        left: 140px;
         width: 865px;
         line-height: 98px;
         color: #1E2A39;
 
         &-accent {
             position: absolute;
-            top: 390px;
-            left: 345px;
+            top: 245px;
+            left: 210px;
         }
     }
 
     &__tagline-description {
-        position: absolute;
-        top: 530px;
-        left: 140px;
         width: 520px;
+        margin-top: 30px;
     }
 
     &__actions {
-        position: absolute;
-        top: 655px;
-        left: 140px;
+        margin-top: 50px;
         display: flex;
         align-items: center;
     }
@@ -54,21 +54,6 @@
             font-weight: 400;
             @include fontSize(24);
             color: #252641;
-        }
-    }
-
-    &__bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        z-index: 9;
-
-        &-checkbox-icon {
-            position: absolute;
-            top: 625px;
-            left: 1760px;
-            z-index: 10;
         }
     }
 }
