@@ -163,7 +163,7 @@
   cursor: pointer;
 }
 
-.section__play--wrapper:hover .main-section__play-btn {
+.section__play--wrapper:hover .section__play-btn {
   color: #FFFFFF;
 }
 
@@ -646,6 +646,10 @@ h1, h2, h3, h4, h5, h6, p {
   color: #252641;
   font-size: 1.375rem;
   line-height: 1.5rem;
+}
+
+.header__menu .nav__link:hover, .header__menu .nav__link:active {
+  text-shadow: 1px 1px 2px black;
 }
 
 .footer-container {

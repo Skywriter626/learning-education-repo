@@ -50,6 +50,10 @@
             word-wrap: nowrap;
             color: #252641;
             @include fontSize(22);
+
+            &:hover, &:active {
+                text-shadow: 1px 1px 2px black;
+            }
         }
     }
 }
