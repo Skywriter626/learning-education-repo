@@ -140,4 +140,29 @@
             @include fontSize(29);
         }
     }
+
+    &-player--wrapper {
+        display: none;
+        position: relative;
+        padding-bottom: 75%; 
+        height: 0;
+        overflow: hidden;
+      }
+    
+      &-player {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -55%);
+        width: 705px;
+        height: 475px;
+        border-radius: 20px;
+        border-width: 0;
+        outline-width: 0;
+      }
+
+}
+
+.visible {
+    display: block;
 }

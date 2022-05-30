@@ -649,7 +649,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .header__menu .nav__link:hover, .header__menu .nav__link:active {
-  text-shadow: 1px 1px 2px black;
+  text-shadow: 1px 1px 2px #252641;
 }
 
 .footer-container {
@@ -1071,6 +1071,31 @@ h1, h2, h3, h4, h5, h6, p {
 .about-elearn-section__play-btn {
   font-size: 1.8125rem;
   line-height: 1.9375rem;
+}
+
+.about-elearn-section-player--wrapper {
+  display: none;
+  position: relative;
+  padding-bottom: 75%;
+  height: 0;
+  overflow: hidden;
+}
+
+.about-elearn-section-player {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -55%);
+          transform: translate(-50%, -55%);
+  width: 705px;
+  height: 475px;
+  border-radius: 20px;
+  border-width: 0;
+  outline-width: 0;
+}
+
+.visible {
+  display: block;
 }
 
 .benefits-section {
