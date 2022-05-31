@@ -3,6 +3,7 @@
 
     .about-elearn-section-container {
         position: relative;
+        z-index: 12;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -54,6 +55,20 @@
 
     .section__img--wrapper-students {
         background-image: url(/assets/images/about-elearn/for-students.jpg);
+    }
+
+    .access-form--wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .access-form-control {
+        margin-bottom: 20px;
+    }
+
+    .access-form__submit-btn {
+        border: 1px solid $colorPrimary;
     }
 
     .about-elearn-section-video-container {
@@ -147,7 +162,7 @@
         padding-bottom: 75%; 
         height: 0;
         overflow: hidden;
-      }
+    }
     
       &-player {
         position: absolute;
@@ -159,8 +174,7 @@
         border-radius: 20px;
         border-width: 0;
         outline-width: 0;
-      }
-
+    }
 }
 
 .visible {

@@ -583,7 +583,7 @@ h1, h2, h3, h4, h5, h6, p {
 .modal {
   display: none;
   position: fixed;
-  z-index: 10;
+  z-index: 99;
   padding-top: 100px;
   left: 0;
   top: 0;
@@ -599,7 +599,7 @@ h1, h2, h3, h4, h5, h6, p {
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 50%;
   font-family: "Poppins";
   font-size: 1.375rem;
   line-height: 1.5rem;
@@ -853,7 +853,7 @@ h1, h2, h3, h4, h5, h6, p {
 .main-section__tagline--wrapper {
   position: relative;
   height: 435px;
-  z-index: 99;
+  z-index: 9;
   margin-left: 140px;
   padding-top: 160px;
   text-align: left;
@@ -912,6 +912,25 @@ h1, h2, h3, h4, h5, h6, p {
   color: #252641;
 }
 
+.main-section-player--wrapper {
+  position: relative;
+  padding-bottom: 75%;
+  height: 0;
+  overflow: hidden;
+}
+
+.main-section-player {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-width: 0;
+  outline-width: 0;
+}
+
 .partners-section .partners-section-container {
   margin-top: 100px;
 }
@@ -946,6 +965,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .about-elearn-section .about-elearn-section-container {
   position: relative;
+  z-index: 12;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1013,6 +1033,27 @@ h1, h2, h3, h4, h5, h6, p {
 
 .about-elearn-section .section__img--wrapper-students {
   background-image: url(/assets/images/about-elearn/for-students.jpg);
+}
+
+.about-elearn-section .access-form--wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-elearn-section .access-form-control {
+  margin-bottom: 20px;
+}
+
+.about-elearn-section .access-form__submit-btn {
+  border: 1px solid #6C6C6C;
 }
 
 .about-elearn-section .about-elearn-section-video-container {
@@ -1143,7 +1184,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .benefits-section-container {
   position: relative;
-  z-index: 99;
+  z-index: 11;
   height: 760px;
   display: -webkit-box;
   display: -ms-flexbox;

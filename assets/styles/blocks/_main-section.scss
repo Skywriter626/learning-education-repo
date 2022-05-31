@@ -7,7 +7,7 @@
     &__tagline--wrapper {
         position: relative;
         height: 435px;
-        z-index: 99;
+        z-index: 9;
         margin-left: 140px;
         padding-top: 160px;
         text-align: left;
@@ -55,5 +55,23 @@
             @include fontSize(24);
             color: #252641;
         }
+    }
+
+    &-player--wrapper {
+        position: relative;
+        padding-bottom: 75%; 
+        height: 0;
+        overflow: hidden;
+    }
+    
+      &-player {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        border-width: 0;
+        outline-width: 0;
     }
 }

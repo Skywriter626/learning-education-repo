@@ -173,7 +173,7 @@ h1, h2, h3, h4, h5, h6, p {
 .modal {
     display: none; 
     position: fixed;
-    z-index: 10;
+    z-index: 99;
     padding-top: 100px;
     left: 0;
     top: 0;
@@ -189,7 +189,7 @@ h1, h2, h3, h4, h5, h6, p {
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 50%;
     font-family: $fontPoppins;
     @include fontSize(22);
   }

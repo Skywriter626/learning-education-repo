@@ -1,5 +1,25 @@
 'use strict'
 
+const playIntroVideoPlayer = () => {
+    const playerWrapper = document.querySelector('.main-section-player--wrapper')
+    const player = playerWrapper.querySelector('.main-section-player').contentWindow
+    player.postMessage('{"event": "command", "func": "playVideo", "args": ""}', "*");
+}
+
+const stopIntroVideoPlayer = () => {
+    const playerWrapper = document.querySelector('.main-section-player--wrapper')
+    const player = playerWrapper.querySelector('.main-section-player').contentWindow
+    player.postMessage('{"event": "command", "func": "stopVideo", "args": ""}', "*");
+}
+
+const initIntroVideoPlayer = () => {
+    const introPlayBtn = document.querySelector('.main-section__play--wrapper')
+    introPlayBtn.addEventListener('click', playIntroVideoPlayer)
+    const modal = introPlayBtn.parentNode.querySelector('.modal')
+    const closeBtn = modal.getElementsByClassName('close')[0]
+    closeBtn.addEventListener('click', stopIntroVideoPlayer)
+}
+
 const playELearnVideoPlayer = () => {
     const playerWrapper = document.querySelector('.about-elearn-section-player--wrapper')
     const player = playerWrapper.querySelector('.about-elearn-section-player').contentWindow
@@ -24,12 +44,12 @@ const initELearnVideoPlayer = () => {
 }
 
 const initModalWindowViewer = () => {
-    let modalTriggers = document.querySelectorAll('.modal-trigger');
+    const modalTriggers = document.querySelectorAll('.modal-trigger');
     modalTriggers.forEach(modalTrigger => {
 
-        let modal = modalTrigger.parentNode.querySelector('.modal')
+        const modal = modalTrigger.parentNode.querySelector('.modal')
 
-        let span = modal.getElementsByClassName("close")[0]
+        const span = modal.getElementsByClassName('close')[0]
 
         modalTrigger.onclick = function() {
             modal.style.display = "block";
@@ -47,9 +67,22 @@ const initModalWindowViewer = () => {
     })
 }
 
+const putAccessCode = event => {
+    const targetBlock = event.target
+    const accessCode = targetBlock.parentNode.querySelector('#accessCode').value
+    localStorage.setItem('accessCode', accessCode)
+}
+
+const initAccessCodeLocalStorage = () => {
+    const submitBtn = document.querySelector('.access-form__submit-btn')
+    submitBtn.addEventListener('click', putAccessCode)
+}
+
 const init = () => {
+    initIntroVideoPlayer()
     initELearnVideoPlayer()
     initModalWindowViewer()
+    initAccessCodeLocalStorage()
 }
 
 window.addEventListener('DOMContentLoaded', init)
