@@ -15,9 +15,15 @@ const stopIntroVideoPlayer = () => {
 const initIntroVideoPlayer = () => {
     const introPlayBtn = document.querySelector('.main-section__play--wrapper')
     introPlayBtn.addEventListener('click', playIntroVideoPlayer)
-    const modal = introPlayBtn.parentNode.querySelector('.modal')
+    const main = document.querySelector('.main-section-container')
+    const modal = main.querySelector('.modal')
     const closeBtn = modal.getElementsByClassName('close')[0]
     closeBtn.addEventListener('click', stopIntroVideoPlayer)
+    window.addEventListener('click', event => {
+        if (event.target.classList.contains('modal')) {
+            stopIntroVideoPlayer()
+        }
+    })
 }
 
 const playELearnVideoPlayer = () => {
@@ -44,24 +50,25 @@ const initELearnVideoPlayer = () => {
 }
 
 const initModalWindowViewer = () => {
-    const modalTriggers = document.querySelectorAll('.modal-trigger');
-    modalTriggers.forEach(modalTrigger => {
+    const modalWindows = document.querySelectorAll('.modal')
 
-        const modal = modalTrigger.parentNode.querySelector('.modal')
+    modalWindows.forEach(modalWindow => {
 
-        const span = modal.getElementsByClassName('close')[0]
+        const span = modalWindow.getElementsByClassName('close')[0]
+
+        const modalTrigger = modalWindow.closest('section').querySelector('.modal-trigger')
 
         modalTrigger.onclick = function() {
-            modal.style.display = "block";
+            modalWindow.style.display = "block";
         }
 
         span.onclick = function() {
-            modal.style.display = "none";
+            modalWindow.style.display = "none";
         }
 
         window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
             }
         }
     })
@@ -70,7 +77,11 @@ const initModalWindowViewer = () => {
 const putAccessCode = event => {
     const targetBlock = event.target
     const accessCode = targetBlock.parentNode.querySelector('#accessCode').value
-    localStorage.setItem('accessCode', accessCode)
+    if (accessCode != "") {
+        localStorage.setItem('accessCode', accessCode)
+        const modalWindow = targetBlock.closest('.modal')
+        modalWindow.style.display = "none"
+    }
 }
 
 const initAccessCodeLocalStorage = () => {
@@ -79,38 +90,37 @@ const initAccessCodeLocalStorage = () => {
 }
 
 const init = () => {
+    initModalWindowViewer()
     initIntroVideoPlayer()
     initELearnVideoPlayer()
-    initModalWindowViewer()
     initAccessCodeLocalStorage()
 }
 
-window.addEventListener('DOMContentLoaded', init)
-
-$(function(){
-    $('.testimonial-section__slider').slick({
-        prevArrow: false,
-        nextArrow: '<button type="button" class="slick-btn slick-next"><img src="./assets/images/testimonial/arrow-next.svg" alt=""></button>',
-    });
-});
-
 $(document).ready(function(){
-    $('.slick-btn').click(function(){
-        var btn = $('.slick-btn').prop({disabled: true});
-        $('.testimonial-section__assessment-content:nth-child(1)').slideToggle({
-            duration: 500,
-            complete: function() {
-                btn.prop({disabled: false});
-            }
-        }); 
-    });
-    $('.slick-btn').click(function(){
-        var btn = $('.slick-btn').prop({disabled: true});
-        $('.testimonial-section__assessment-content:nth-child(2)').slideToggle({
-            duration: 500,
-            complete: function() {
-                btn.prop({disabled: false});
-            }
-        });
-    });
+	var slider = $('.testimonial-section__slider');
+	slider.slick({
+		autoplay: false,
+	    dots: false,
+	    infinite: true,
+	    speed: 500,
+	    fade: true,
+	    cssEase: 'linear',
+	    lazyLoad: 'ondemand',
+	    controls: false,
+	});
+	var dot = $(".testimonial-section__assessment-content");
+	slider.on("beforeChange", function(event, slick, currentSlide, nextSlide) {
+	    dot.removeClass("visible").eq(nextSlide).addClass("visible")
+	});
+	dot.on("click", function() {
+	    var i = dot.index(this)
+	    slider.slick("slickGoTo", i)
+	});
+	$(".slick-prev").remove();
+    $(".slick-next").remove();
+	$(".slick-btn").on("click", function() {
+	    slider.slick("slickNext")
+	})
 });
+
+window.addEventListener('DOMContentLoaded', init)
